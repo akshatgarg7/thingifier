@@ -9,6 +9,7 @@ public class ClearDataPreSparkRequestHook implements SparkRequestResponseHook {
     private final Thingifier thingifier;
     private final long maxgap;
 
+    //TODO: cast int minutes to long
     public ClearDataPreSparkRequestHook(final int minutes, Thingifier thingifier) {
         this.lastReset = System.currentTimeMillis();
         this.thingifier = thingifier;
