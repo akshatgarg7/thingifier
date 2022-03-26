@@ -119,6 +119,7 @@ final public class EntityInstanceCollection {
         return definition;
     }
 
+    //TODO: remove the method as it is no longer used
     private List<String> getGuidList() {
         List<String> guids = new ArrayList<>();
         for(EntityInstance instance : instances.values()){
