@@ -109,6 +109,7 @@ public class MainImplementation {
         defaultModelName=modelName;
     }
 
+    //FIXME: remove unused parameter this.args
     public void setDefaultsFromArgs(final String[] args) {
 
         String modelName=defaultModelName;
