@@ -124,6 +124,7 @@ public final class Field {
     }
 
     // allowedToSetIds is a bit of hack - refactor other code so not required
+    //FIXME: remove the if statement and insert an todo statement
     public ValidationReport validate(FieldValue value, boolean allowedToSetIds) {
 
 
