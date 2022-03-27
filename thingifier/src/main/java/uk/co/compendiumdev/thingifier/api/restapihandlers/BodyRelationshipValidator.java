@@ -115,7 +115,6 @@ public class BodyRelationshipValidator {
 
 
 
-    //FIXME: remove unused variable 'relationshipsPart'
     private boolean validateComplexFourPartRelationshipDefinition(
             final EntityDefinition thingDefinition, final ValidationReport report,
             final String complexKey, final String complexKeyValue) {
@@ -126,7 +125,6 @@ public class BodyRelationshipValidator {
             return false;
         }
 
-        String relationshipsPart = parts[0];
         String relationshipNamePart = parts[1];
         String relationshipToPart = parts[2];
         String relationshipFieldPart = parts[3];
