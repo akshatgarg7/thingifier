@@ -119,16 +119,6 @@ final public class EntityInstanceCollection {
         return definition;
     }
 
-    //TODO: remove the method as it is no longer used
-    private List<String> getGuidList() {
-        List<String> guids = new ArrayList<>();
-        for(EntityInstance instance : instances.values()){
-            guids.add(instance.getGUID());
-        }
-
-        return guids;
-    }
-
 
     // todo: not comfortable with this method, we should be using specific field names
     public EntityInstance findInstanceByGUIDorID(final String instanceGuid) {
