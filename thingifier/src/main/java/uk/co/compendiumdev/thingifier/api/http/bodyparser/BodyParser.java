@@ -144,6 +144,7 @@ public class BodyParser {
     /**
      * Only parse it once and then cache the converted map
      */
+    //TODO: add curly braces around the if statement
     public void parseMap() {
 
         if(args!=null)
