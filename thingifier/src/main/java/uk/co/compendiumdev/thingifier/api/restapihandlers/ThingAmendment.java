@@ -19,11 +19,9 @@ public class ThingAmendment {
         this.thingifier = thingifier;
     }
 
-    //TODO: remove the dead store in args
     public ApiResponse amendInstance(final BodyParser bodyargs, final EntityInstance instance,
                                      final Boolean clearFieldsBeforeSettingFromArgs) {
 
-        Map<String, String> args = bodyargs.getStringMap();
 
         if(thingifier.apiConfig().willApiEnforceDeclaredTypesInInput()) {
             ValidationReport validatedTypes = bodyargs.validateAgainstType(instance.getEntity());
