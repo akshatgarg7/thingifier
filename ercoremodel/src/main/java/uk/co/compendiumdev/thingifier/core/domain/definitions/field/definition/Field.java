@@ -124,7 +124,6 @@ public final class Field {
     }
 
     // allowedToSetIds is a bit of hack - refactor other code so not required
-    //FIXME: remove the if statement and insert an todo statement
     public ValidationReport validate(FieldValue value, boolean allowedToSetIds) {
 
 
@@ -160,10 +159,6 @@ public final class Field {
 
             if (type == FieldType.INTEGER) {
                 validateIntegerValue(value, report);
-            }
-
-            if(type == FieldType.STRING){
-                // length is validated by a rule
             }
 
             if (type == FieldType.FLOAT) {
