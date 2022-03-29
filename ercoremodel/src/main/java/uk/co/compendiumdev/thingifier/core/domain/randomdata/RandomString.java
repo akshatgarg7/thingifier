@@ -11,6 +11,7 @@ public class RandomString {
     public String get(int length){
 
         int baseCount = baseString.length();
+        StringBuilder sb = new StringBuilder();
 
         if(length<baseCount){
             int startBetween = baseCount-length;
@@ -20,10 +21,14 @@ public class RandomString {
             int startAt = ThreadLocalRandom.current().
                     nextInt(0, startBetween);
             String retString = baseString.substring(startAt, startAt+length).trim();
+            sb.append(retString);
 
             while(retString.length()<length){
-                retString = retString + "a";
+                sb.append("a");
+                sb.append(retString);
             }
+
+            retString = sb.toString();
             return retString;
         }else{
             // todo generate longer one

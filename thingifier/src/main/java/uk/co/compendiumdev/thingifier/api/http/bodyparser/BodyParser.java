@@ -40,19 +40,20 @@ public class BodyParser {
         // todo: configuration to reject if wrong types for field definitions
         // default should be to handle and convert
         Map<String, String> stringsInMap = new HashMap();
-        for (String key : args.keySet()) {
-            Object theValue = args.get(key);
+        for (Map.Entry<String, Object> key : args.entrySet()) {
+            String k = key.getKey();
+            Object theValue = args.get(k);
 
             if (theValue instanceof Boolean ) {
-                stringsInMap.put(key, String.valueOf(theValue));
+                stringsInMap.put(k, String.valueOf(theValue));
             }
 
             if (theValue instanceof String ) {
-                stringsInMap.put(key, (String) theValue);
+                stringsInMap.put(k, (String) theValue);
             }
 
             if(theValue instanceof Double){
-                stringsInMap.put(key, String.valueOf(theValue));
+                stringsInMap.put(k, String.valueOf(theValue));
             }
         }
         return stringsInMap;

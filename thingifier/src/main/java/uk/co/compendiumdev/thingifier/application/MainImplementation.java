@@ -109,11 +109,9 @@ public class MainImplementation {
         defaultModelName=modelName;
     }
 
-    //FIXME: remove unused parameter this.args
     public void setDefaultsFromArgs(final String[] args) {
 
         String modelName=defaultModelName;
-        this.args = args;
 
         System.out.println("Valid Model Names -model=");
         for(String aModelName : thingifierModels.keySet()){
